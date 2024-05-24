@@ -1,1 +1,148 @@
-Hello World
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-family: Garamond, serif;
+  background-color: lightgray;
+}
+body
+{
+    max-width: 1000px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:50px;
+}
+
+#header{
+background: #ffffff;
+display: flex;
+direction: row;
+justify-content: center;
+}
+
+#profilepic{
+border-radius: 50% !important;
+width: 200px;
+}
+
+.flex-column {
+	flex-direction: column !important;
+}
+
+.d-flex {
+	display: flex !important;
+}
+
+#nav{
+text-align: center;
+padding-top: 30px;
+}
+
+#profile_text{
+padding-right: 30px;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#publist{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="main-container">
+<header id="header">
+
+    <div id="profile_text">
+    <h1>Manuel Baum</h1>
+    <h2>Robotics Researcher</h2>
+    </div>
+
+    
+
+    <div>
+    <img id="profilepic" src="images/profilepicture.jpg"/>
+    </div>
+</header>
+
+
+     <nav id="nav">
+      <a href="/html/">Research</a> |
+      <a href="/resume/">Resume</a> |
+      <a href="/contact/">Contact</a> |
+    </nav> 
+
+
+
+
+
+<div class="d-flex flex-column">
+
+ <section>
+<h1>Research</h1>
+<p>I am currently finishing my PhD at TU Berlin where my research is on robotic manipulation and mechanical problem solving in birds. In my research I program robots to perform mechanical tasks like opening drawers and grasping objects out of them. I am not only interested in how to let robots learn such behaviors, but also how to let them do so robustly -- e.g. when humans interfere with the task.</p>
+
+<p>In my robotics research I have used lots of different techniques from machine learning, computer vision, and control theory. It's always interesting how methods from these fields can be adapted and integrated into robotic behavior. For example, methods from computer vision can benefit from the fact that robots can move their camera and remove occlusions by pushing obstacles out of the way.</p>
+
+<p>Because robotic behavior is often not as robust as that of animals, I believe it is useful to understand how animals can solve similar mechanical problems. Thus, in collaboration with behavioral biologists I have also conducted research that spans the fields of robotics and biology. In this work we have investigated how Goffin's cockatoos can solve complex mechanical puzzles, so called lockboxes.</p>
+</section>
+
+<section>
+<h1>Publications</h1>
+
+<div id="publist">
+
+<div><b><u>Baum, Manuel</u></b>, Matthew Bernstein, Roberto Martin-Martin, Sebastian Höfer, Johannes Kulick, Marc Toussaint, Alex Kacelnik, and Oliver Brock. "Opening a lockbox through physical exploration." In 2017 IEEE-RAS 17th International Conference on Humanoid Robotics (Humanoids), pp. 461-467. IEEE, 2017.</div>
+
+<div>Mengers, Vito, Aravind Battaje, <b><u>Manuel Baum</u></b>, and Oliver Brock. "Combining Motion and Appearance for Robust Probabilistic Object Segmentation in Real Time." In 2023 IEEE International Conference on Robotics and Automation (ICRA), pp. 683-689. IEEE, 2023.</div>
+
+<div><b><u>Baum, Manuel</u></b>, Amelie Froessl, Aravind Battaje, and Oliver Brock. "Estimating the Motion of Drawers From Sound." In 2023 IEEE International Conference on Robotics and Automation (ICRA), pp. 697-703. IEEE, 2023.</div>
+
+<div>Li, Xing, <b><u>Manuel Baum</u></b>, and Oliver Brock. "Augmentation Enables One-Shot Generalization in Learning from Demonstration for Contact-Rich Manipulation." In 2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp. 3656-3663. IEEE, 2023.</div>
+
+<div><b><u>Baum, Manuel</u></b>, Lukas Schattenhofer, Theresa Rössler, Antonio Osuna-Mascaró, Alice Auersperg, Alex Kacelnik, and Oliver Brock. "Yoking-Based Identification of Learning Behavior in Artificial and Biological Agents." In International Conference on Simulation of Adaptive Behavior, pp. 67-78. Cham: Springer International Publishing, 2022.</div>
+
+<div><b><u>Baum, Manuel</u></b>, and Oliver Brock. "“The World Is Its Own Best Model”: Robust Real-World Manipulation Through Online Behavior Selection." In 2022 International Conference on Robotics and Automation (ICRA), pp. 1499-1505. IEEE, 2022.</div>
+
+<div><b><u>Baum, Manuel</u></b>, Matthew Bernstein, Roberto Martin-Martin, Sebastian Höfer, Johannes Kulick, Marc Toussaint, Alex Kacelnik, and Oliver Brock. "Opening a lockbox through physical exploration." In 2017 IEEE-RAS 17th International Conference on Humanoid Robotics (Humanoids), pp. 461-467. IEEE, 2017.</div>
+
+<div><b><u>Baum, Manuel</u></b>, and Oliver Brock. "Achieving robustness by optimizing failure behavior." In 2017 IEEE International Conference on Robotics and Automation (ICRA), pp. 5806-5811. IEEE, 2017.</div>
+
+<div><b><u>Baum, Manuel</u></b>, Martin Meier, and Malte Schilling. "Population based mean of multiple computations networks: A building block for kinematic models." In 2015 International Joint Conference on Neural Networks (IJCNN), pp. 1-8. IEEE, 2015.</div>
+
+<div><b><u>Baum, Manuel</u></b>  "Modeling kinematics of a redundant manipulator using population coding and the MMC principle" Master Thesis, Faculty of Technology, Bielefeld University (2014).</div>
+
+<div><b><u>Baum, Manuel</u></b> "Using spinImages for 3D object classification." Bachelor Thesis, Faculty of Technology, Bielefeld University (2011)./div>
+
+</div>
+
+</section> 
+
+
+
+</div>
+
+ <footer>
+ <h2> Contact: </h2>
+  <p>Author: Manuel Baum</p>
+  <p>manuelbaum@<!-- sdfjsdhfkjypcs -->posteo.de</p>
+  <a href="impressum">Impressum</a></p>
+</footer> 
+
+</div>
+</body>
+</html>
