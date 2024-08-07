@@ -46,6 +46,12 @@ width: 200px;
 	display: flex !important;
 }
 
+#externallinks{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 #nav{
 text-align: center;
 padding-top: 30px;
@@ -77,22 +83,30 @@ text-size:medium;
 
 <div id="main-container">
 <header>
-        <div id="header_top">
+    <div id="header_top">
 
-    <div id="profile_text">
-    <h1>Manuel Baum</h1>
-    <h2>Robotics Researcher</h2>
+        <div id="profile_text">
+        <h1>Manuel Baum</h1>
+        <h2>Robotics Researcher</h2>
+            <div id="externallinks">
+                <div class="cellContainer">
+                    <a href="https://github.com/manuelbaum" title="Me on Github"><img src="images/github-mark.png" height="50px"/></a>
+                </div>
+                <div class="cellContainer">
+                    <a href="https://www.linkedin.com/in/manuelbaum/" title="Me at Linkedin"><img src="images/linkedin.svg" height="50px"/></a>
+                </div>
+                <div class="cellContainer">
+                    <a href="https://www.tu.berlin/robotics/ueber-uns/team/manuel-baum" title="Me at TU Berlin"><img src="images/tu_logo.png" height="50px"/></a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div>
+        <img id="profilepic" src="images/profilepicture.jpg"/>
+        </div>
     </div>
-
-    
-
-    <div>
-    <img id="profilepic" src="images/profilepicture.jpg"/>
-    </div>
-</div>
-            <a href="https://github.com/manuelbaum"><img src="images/github-mark.png" height="50px"/>Me on Github</a>
-            <a href=" https://www.tu.berlin/robotics/ueber-uns/team/manuel-baum"><img src="images/tu_logo.png" height="50px"/>Me at TU Berlin</a>
-
 
 </header>
 
