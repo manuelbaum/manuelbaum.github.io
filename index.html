@@ -13,7 +13,7 @@ aside {
 }
 body
 {
-    max-width: 1200px;
+    max-width: 1000px;
     margin-left:auto;
     margin-right:auto;
     padding:50px;
@@ -77,6 +77,24 @@ padding-right: 30px;
 text-size:medium;
 }
 
+  .videocontainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.videoiframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 </style>
 
 </head>
@@ -130,14 +148,20 @@ text-size:medium;
 
 <p>In my robotics research I have used lots of different techniques from machine learning, computer vision, and control theory. It's always interesting how methods from these fields can be adapted and integrated into robotic behavior. For example, methods from computer vision can benefit from the fact that robots can move their camera and remove occlusions by pushing obstacles out of the way.</p>
 
-<p>Because robotic behavior is often not as robust as that of animals, I believe it is useful to understand how animals can solve similar mechanical problems. Thus, in collaboration with behavioral biologists I have also conducted research that spans the fields of robotics and biology. In this work we have investigated how Goffin's cockatoos can solve complex mechanical puzzles, so called lockboxes.</p>
+<!--<p>Because robotic behavior is often not as robust as that of animals, I believe it is useful to understand how animals can solve similar mechanical problems. Thus, in collaboration with behavioral biologists I have also conducted research that spans the fields of robotics and biology. In this work we have investigated how Goffin's cockatoos can solve complex mechanical puzzles, so called lockboxes.</p>-->
 </section>
 
     <section>
-        <h1>Videos</h1>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/8K6IOKOb-Vs?si=YCgv4GQH4YIAfd_O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/WSnPnpHLpdI?si=Z0nFi_4VparMAYhH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+        <h1>Videos</h1>
+        <div class="videocontainer">
+        <iframe class="videoiframe" src="https://www.youtube.com/embed/8K6IOKOb-Vs?si=YCgv4GQH4YIAfd_O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="videocontainer">
+            <iframe class="videoiframe"  src="https://www.youtube.com/embed/WSnPnpHLpdI?si=Z0nFi_4VparMAYhH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </section>
 
 <section>
@@ -145,7 +169,7 @@ text-size:medium;
 
 <div id="publist">
 
-<div class="pub"><b><u>Baum, Manuel</u></b>, Matthew Bernstein, Roberto Martin-Martin, Sebastian Höfer, Johannes Kulick, Marc Toussaint, Alex Kacelnik, and Oliver Brock. "Opening a lockbox through physical exploration." In 2017 IEEE-RAS 17th International Conference on Humanoid Robotics (Humanoids), pp. 461-467. IEEE, 2017.</div>
+<div class="pub"><b><u>Baum, Manuel</u></b>, Matthew Bernstein, Roberto Martin-Martin, Sebastian H&ouml;fer, Johannes Kulick, Marc Toussaint, Alex Kacelnik, and Oliver Brock. "Opening a lockbox through physical exploration." In 2017 IEEE-RAS 17th International Conference on Humanoid Robotics (Humanoids), pp. 461-467. IEEE, 2017.</div>
 
 <div class="pub">Mengers, Vito, Aravind Battaje, <b><u>Manuel Baum</u></b>, and Oliver Brock. "Combining Motion and Appearance for Robust Probabilistic Object Segmentation in Real Time." In 2023 IEEE International Conference on Robotics and Automation (ICRA), pp. 683-689. IEEE, 2023.</div>
 
@@ -153,11 +177,11 @@ text-size:medium;
 
 <div class="pub">Li, Xing, <b><u>Manuel Baum</u></b>, and Oliver Brock. "Augmentation Enables One-Shot Generalization in Learning from Demonstration for Contact-Rich Manipulation." In 2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp. 3656-3663. IEEE, 2023.</div>
 
-<div class="pub"><b><u>Baum, Manuel</u></b>, Lukas Schattenhofer, Theresa Rössler, Antonio Osuna-Mascaró, Alice Auersperg, Alex Kacelnik, and Oliver Brock. "Yoking-Based Identification of Learning Behavior in Artificial and Biological Agents." In International Conference on Simulation of Adaptive Behavior, pp. 67-78. Cham: Springer International Publishing, 2022.</div>
+<div class="pub"><b><u>Baum, Manuel</u></b>, Lukas Schattenhofer, Theresa R&ouml;ssler, Antonio Osuna-Mascaró, Alice Auersperg, Alex Kacelnik, and Oliver Brock. "Yoking-Based Identification of Learning Behavior in Artificial and Biological Agents." In International Conference on Simulation of Adaptive Behavior, pp. 67-78. Cham: Springer International Publishing, 2022.</div>
 
 <div class="pub"><b><u>Baum, Manuel</u></b>, and Oliver Brock. "“The World Is Its Own Best Model”: Robust Real-World Manipulation Through Online Behavior Selection." In 2022 International Conference on Robotics and Automation (ICRA), pp. 1499-1505. IEEE, 2022.</div>
 
-<div class="pub"><b><u>Baum, Manuel</u></b>, Matthew Bernstein, Roberto Martin-Martin, Sebastian Höfer, Johannes Kulick, Marc Toussaint, Alex Kacelnik, and Oliver Brock. "Opening a lockbox through physical exploration." In 2017 IEEE-RAS 17th International Conference on Humanoid Robotics (Humanoids), pp. 461-467. IEEE, 2017.</div>
+<div class="pub"><b><u>Baum, Manuel</u></b>, Matthew Bernstein, Roberto Martin-Martin, Sebastian H&ouml;fer, Johannes Kulick, Marc Toussaint, Alex Kacelnik, and Oliver Brock. "Opening a lockbox through physical exploration." In 2017 IEEE-RAS 17th International Conference on Humanoid Robotics (Humanoids), pp. 461-467. IEEE, 2017.</div>
 
 <div class="pub"><b><u>Baum, Manuel</u></b>, and Oliver Brock. "Achieving robustness by optimizing failure behavior." In 2017 IEEE International Conference on Robotics and Automation (ICRA), pp. 5806-5811. IEEE, 2017.</div>
 
