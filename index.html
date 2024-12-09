@@ -3,21 +3,23 @@
 <html>
 <head>
 <style>
+
+/**/
 aside {
   width: 30%;
   padding-left: 15px;
   margin-left: 15px;
   float: right;
-  font-family: Garamond, serif;
+  /*font-family: Garamond, serif;*/
   background-color: lightgray;
 }
 body
 {
-    max-width: 1000px;
-    margin-left:auto;
-    margin-right:auto;
-    padding:50px;
     font-size: calc(15px + 0.390625vw);
+    padding: 0px 0px;
+    margin: 0;
+    background: #605EA1 ;
+    color: #E6E9AF ;
 }
 
 #header{
@@ -27,16 +29,24 @@ direction: col;
 justify-content: center;
 }
 
-#header_top{
-background: #ffffff;
-display: flex;
-direction: row;
-justify-content: center;
+#floatheader {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0px 0px;
+  background: #E6E9AF;
+  color: #22177A;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000; /* Optional: Ensure it appears above other content */
 }
 
 #profilepic{
-border-radius: 50% !important;
-width: 200px;
+//border-radius: 50% !important;
+width: 400px;
 }
 
 .flex-column {
@@ -55,22 +65,59 @@ width: 200px;
 
 #nav{
 text-align: center;
-padding-top: 30px;
+//padding-top: 30px;
 }
 
 #profile_text{
 padding-right: 30px;
 }
 
+
+/* body and content */
 #main-container {
+    /*max-width: 1000px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:50px;*/
   display: flex;
   flex-direction: column;
 }
+
+.textbox {
+max-width: 70ch;
+}
+
+.block {
+    /*max-width: 1000px;
+    margin-left:auto;
+    margin-right:auto;*/
+    padding:200px;
+}
+
+.blockcolor_a {  
+  color: #605EA1;
+  background-color: #E6E9AF;}
+.blockcolor_b {
+  color: #E6E9AF;
+  background-color: #605EA1;}
 
 #publist{
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+#section_about{
+  color: #E6E9AF;
+  background-color: #605EA1;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 80px;
+}
+
+#section_videos{
+
 }
 
 .pub{
@@ -79,7 +126,7 @@ text-size:medium;
 
   .videocontainer {
   position: relative;
-  width: 100%;
+  width: 90%;
   overflow: hidden;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
@@ -90,11 +137,16 @@ text-size:medium;
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   border: none;
 }
-
+/* 
+#22177A
+#605EA1
+#8EA3A6
+#E6E9AF 
+*/
 </style>
 
 <title>Manuel Baum | Robotics Researcher | Machine Learning & Manipulation</title>
@@ -104,34 +156,30 @@ text-size:medium;
 </head>
 <body>
 
-<div id="main-container">
 <header>
-    <div id="header_top">
+<div id="floatheader">
+<div>
+  <h1 style="padding-horizontal: 40px;">Manuel Baum, PhD</h1>
+</div>
 
-        <div id="profile_text">
-        <h1>Manuel Baum</h1>
-        <h2>Robotics Researcher (PhD)</h2>
-            <div id="externallinks">
+<div id="nav">
+<a href="#section_about">About</a> | <a href="#section_videos">Videos</a> | <a href="#section_publications">Publications</a> | <a href="#section_contact">Contact</a> 
+</div>
+
+  <div id="externallinks">
                 <div class="cellContainer">
                     <a href="https://github.com/manuelbaum" title="Me on Github"><img src="images/github-mark.png" height="50px"/></a>
                 </div>
                 <div class="cellContainer">
                     <a href="https://www.linkedin.com/in/manuelbaum/" title="Me at Linkedin"><img src="images/linkedin.svg" height="50px"/></a>
                 </div>
-                <div class="cellContainer">
-                    <a href="https://www.tu.berlin/robotics/ueber-uns/team/manuel-baum" title="Me at TU Berlin"><img src="images/tu_logo.png" height="50px"/></a>
-                </div>
             </div>
-        </div>
-
-
-
-        <div>
-        <img id="profilepic" src="images/profilepicture.jpg"/>
-        </div>
-    </div>
-
+  
+</div>
 </header>
+
+
+<div id="main-container">
 
 
 <!--     <nav id="nav">
@@ -146,29 +194,41 @@ text-size:medium;
 
 <div class="d-flex flex-column">
 
-    <section>
-<h1>Research</h1>
-<p>I'm a robotics researcher and obtained my PhD at TU Berlin where my research concentrated on robotic manipulation and mechanical problem solving in birds. In my research I program robots to perform mechanical tasks like opening drawers and grasping objects out of them. I am not only interested in how to let robots learn such behaviors, but also how to let them do so robustly -- e.g. when humans interfere with the task.</p>
+<section id="section_about" class="block blockcolor_b">
+
+<div>
+<img id="profilepic" src="images/profilepicture.jpg"/>
+</div>
+
+<div class="textbox">
+<h1>I'm a robotics researcher.</h1>
+<p>I obtained my PhD in robotics at TU Berlin where my research concentrated on robotic manipulation. In my research I program robots to perform mechanical tasks like opening drawers and grasping objects out of them. I am not only interested in how to let robots learn such behaviors, but also how to let them do so robustly -- e.g. when humans interfere with the task.</p>
 
 <p>In my robotics research I have used lots of different techniques from machine learning, computer vision, and control theory. It's always interesting how methods from these fields can be adapted and integrated into robotic behavior. For example, methods from computer vision can benefit from the fact that robots can move their camera and remove occlusions by pushing obstacles out of the way.</p>
 
 <!--<p>Because robotic behavior is often not as robust as that of animals, I believe it is useful to understand how animals can solve similar mechanical problems. Thus, in collaboration with behavioral biologists I have also conducted research that spans the fields of robotics and biology. In this work we have investigated how Goffin's cockatoos can solve complex mechanical puzzles, so called lockboxes.</p>-->
+</div>
+
 </section>
 
-    <section>
+
+
+<section id="section_videos" class="block blockcolor_a">
 
 
 
         <h1>Videos</h1>
-        <div class="videocontainer">
-        <iframe class="videoiframe" src="https://www.youtube.com/embed/8K6IOKOb-Vs?si=YCgv4GQH4YIAfd_O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div style="display: flex; flex-direction: row; padding: 10px; gap: 20px">
+        <div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8K6IOKOb-Vs?si=HwVlmTWjGxFVaUgr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div class="videocontainer">
-            <iframe class="videoiframe"  src="https://www.youtube.com/embed/WSnPnpHLpdI?si=Z0nFi_4VparMAYhH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WSnPnpHLpdI?si=SW-UXipSWAHYgP_B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div>
         </div>
     </section>
 
-<section>
+<section class="block blockcolor_b">
 <h1>Publications</h1>
 
 <div id="publist">
@@ -203,7 +263,7 @@ text-size:medium;
 
 </div>
 
- <footer>
+ <footer class="block blockcolor_a">
  <h2> Contact: </h2>
   <p>Author: Manuel Baum</p>
   <p>manuelbaum@<!-- sdfjsdhfkjypcs -->posteo.de</p>
